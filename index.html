@@ -43,11 +43,19 @@
         <div class="col-4 sidebar">
           <div class="card-front-img shadow m-4">
             <img src="./images/card-logo.svg" alt="" class="img-fluid m-4" />
-            <span class="d-block m-4" id="card-number"
+            <span class="d-inline-block m-4 fs-3" id="card-number"
               >0000 0000 0000 0000</span
             >
-            <span class="d-inline-block ms-4 mb-4" id="cardName"></span>
-            <span class="float-end me-4 mb-4">00/00</span>
+            <span class="d-inline-block ms-4 mb-4" id="cardName"
+              >Jane Appleseed</span
+            >
+            <div class="d-inline-block float-end me-4">
+              <span class="" id="cardMonth">00</span>/<span
+                class=""
+                id="cardYear"
+                >00</span
+              >
+            </div>
           </div>
           <div class="card-back-img shadow m-4">
             <span class="float-end d-block" id="cvc">000</span>
@@ -77,7 +85,7 @@
                     autocomplete="cc-number"
                     maxlength="19"
                     placeholder="e.g. 1234 5678 9123 0000"
-                    onclick="nameInputvalue()"
+                    onclick="nameInputvalue(event)"
                   />
                 </div>
                 <div class="date-cvc">
@@ -89,8 +97,9 @@
                           <input
                             type="number"
                             class="form-control d-inline-block"
-                            id="mounth"
+                            id="month"
                             placeholder="MM"
+                            onclick="numberInputValue(event)"
                           />
                         </div>
                         <div class="col-6">
@@ -99,6 +108,7 @@
                             class="form-control d-inline-block"
                             id="year"
                             placeholder="YY"
+                            onclick="monthInputValue(event)"
                           />
                         </div>
                       </div>
@@ -110,12 +120,18 @@
                         id="cvc_input"
                         class="form-control"
                         placeholder="e.g. 123"
+                        maxlength="3"
+                        max="999"
+                        min="100"
+                        onclick="yearInputValue(event)"
                       />
                     </div>
                   </div>
                 </div>
               </form>
-              <button class="btn mt-4 d-block w-100 p-2">Confirm</button>
+              <button class="btn mt-4 d-block w-100 p-2" id="confirm">
+                Confirm
+              </button>
             </div>
           </div>
         </div>

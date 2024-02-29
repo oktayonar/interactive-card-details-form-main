@@ -56,9 +56,9 @@ body {
   border-radius: 0.5rem;
   height: 30%;
 }
-#card-number {
+/* #card-number {
   font-size: 1.7rem;
-}
+} */
 #cvc {
   margin: 6.3rem 3rem;
 }
