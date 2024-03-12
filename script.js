@@ -48,8 +48,9 @@ document.querySelector("#year").addEventListener("click", function (e) {
       alert("Please Enter Number in a Valid Format (01-12)");
     }
   } else if (monthValue == "") {
-    document.querySelector("#cardMonth").innerHTML = `!!`;
-    document.querySelector("#cardMonth").classList.add("text-warning", "fs-3");
+    document.querySelector(
+      "#cardMonth"
+    ).innerHTML = `<span class="text-warning fs-4">!!</span>`;
   }
   e.preventDefault();
 });
@@ -70,10 +71,12 @@ document.querySelector("#cvc_input").addEventListener("click", function (e) {
       alert("Please Enter Number in a Valid Format(24-99)");
     }
   } else if (yearValue == "") {
-    document.querySelector("#cardYear").innerHTML = `!!`;
-    document.querySelector("#cardYear").classList.add("text-warning", "fs-3");
-    document.querySelector("#cardMonth").innerHTML = `!!`;
-    document.querySelector("#cardMonth").classList.add("text-warning", "fs-3");
+    document.querySelector(
+      "#cardYear"
+    ).innerHTML = `<span class="text-warning fs-4">!!</span>`;
+    document.querySelector(
+      "#cardMonth"
+    ).innerHTML = `<span class="text-warning fs-4">!!</span>`;
   }
 });
 
